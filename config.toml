@@ -1,3 +1,78 @@
-baseURL = 'http://bwer432.github.io/cultivate-cloud'
-languageCode = 'en-us'
-title = 'Cultivate Cloud'
+languageCode = "en-us"
+ignoreFiles = [ "\\.files/README.md$",  "content/intermediate/260_weave_flux/app.files/"]
+defaultContentLanguage = "en"
+title = "Kubernetes Domain Starter"  # was Kubernetes Primer, then Domain Starter: Kubernetes
+theme = "learn"
+uglyurls = false
+# googleAnalytics = "UA-44634850-4"
+sectionPagesMenu = "main"
+relativeURLs = true
+
+[blackfriday]
+hrefTargetBlank = true
+
+[params]
+editURL = "https://github.com/amcginlay/k8s-primer/edit/main/content/"
+themeVariant = "mine"
+showVisitedLinks = false
+hideSidebar = false  # initially a site parameter, not at page level
+author = "Alan McGinlay"
+description = "Kubernetes Domain Starter"  # was Kubernetes Primer, then Domain Starter: Kubernetes
+disableSearch = false
+disableAssetsBusting = false
+disableLanguageSwitchingButton = true
+disableShortcutsTitle=false
+disableInlineCopyToClipBoard = true
+ghrepo = "https://github.com/amcginlay/k8s-primer/"
+branch = "main"
+template_bucket = "k8s-primer.com"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "tango"
+
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = false
+    disable = true
+    respectDoNotTrack = false
+    useSessionStorage = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
+
+[services]
+  [services.youtube]
+    privacyEnhanced = true
+
+
+
+#
+
+[menu]
+  [[menu.main]]
+    identifier = "Prerequisites"
+    name = "This is the Mu track"
+    title = "Workshop using Mu"
+    url = "/mu/"
+    weight = -110
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> GitHub Project"
+url = "https://github.com/amcginlay/k8s-primer"
+weight = 30
+
+# [[menu.shortcuts]]
+# name = "<i class='fas fa-bookmark'></i> Scratch"
+# url = "/scratch/"
+# weight = 31
+
+[outputs]
+home = [ "HTML", "JSON"]
+page = [ "HTML" ]
+
+# adding for quizdown support, per https://github.com/bonartm/hugo-quiz/README.md
+[minify]
+disableHTML = true
+
