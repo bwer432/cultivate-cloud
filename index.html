@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.107.0">
+    <meta name="description" content="Resources to help cultivate cloud computing development and deployment">
+<meta name="author" content="Brad Werner">
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <title>Cultivate Cloud :: Cultivate Cloud</title>
+
+    
+    <link href="./css/nucleus.css?1669669264" rel="stylesheet">
+    <link href="./css/fontawesome-all.min.css?1669669264" rel="stylesheet">
+    <link href="./css/hybrid.css?1669669264" rel="stylesheet">
+    <link href="./css/featherlight.min.css?1669669264" rel="stylesheet">
+    <link href="./css/perfect-scrollbar.min.css?1669669264" rel="stylesheet">
+    <link href="./css/auto-complete.css?1669669264" rel="stylesheet">
+    <link href="./css/atom-one-dark-reasonable.css?1669669264" rel="stylesheet">
+    <link href="./css/theme.css?1669669264" rel="stylesheet">
+    <link href="./css/tabs.css?1669669264" rel="stylesheet">
+    <link href="./css/hugo-theme.css?1669669264" rel="stylesheet">
+    
+    <link href="./css/theme-mine.css?1669669264" rel="stylesheet">
+    
+    
+
+    <script src="./js/jquery-3.3.1.min.js?1669669264"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    <!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<html lang="en" class="js csstransforms3d">
+  <head>
+
+    <link rel="manifest" href="./manifest.json">
+
+    <meta charset="utf-8">
+    <meta property="og:title" content="k8s-primer.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://k8s-primer.com" />
+    <meta property="og:image" content="https://k8s-primer.com/images/3-service-animated.gif" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./icons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="./icons/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="./icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="./icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="./icons/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Kubernetes Primer"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/icons/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
+
+    <link href="./mermaid/mermaid.css?1669669264" type="text/css" rel="stylesheet" />
+    <link href="./css/jquery-ui.min.css?1669669264" rel="stylesheet">
+    <script src="./js/jquery-ui-1.12.1.min.js?1669669264"></script>
+    <script src="./mermaid/mermaid.min.js?1669669264"></script>
+    <script>
+	var config = {
+        startOnLoad:true,
+        flowchart:{
+	    curve:'basis'
+        }
+      };
+        mermaid.initialize(config);
+    </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownKatex.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownHighlight.js"></script>
+    <script>quizdown.register(quizdownHighlight).register(quizdownKatex).init()</script> 
+
+
+  </head>
+  <body class="" data-url="./">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="./js/lunr.min.js?1669669264"></script>
+<script type="text/javascript" src="./js/auto-complete.js?1669669264"></script>
+<script type="text/javascript">
+    
+        var baseurl = "";
+    
+</script>
+<script type="text/javascript" src="./js/search.js?1669669264"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='./'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/bwer432/cultivate-cloud"><i class='fab fa-github'></i> GitHub Project</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+
+        
+
+<span id="sidebar-toggle-span">
+<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
+</span>
+
+           
+	
+		<h1>Customize your own home page</h1>
+		<p>
+		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
+		</p>
+		<ul>
+			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
+			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
+		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
+		</ul>
+	
+  
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="./js/clipboard.min.js?1669669264"></script>
+    <script src="./js/perfect-scrollbar.min.js?1669669264"></script>
+    <script src="./js/perfect-scrollbar.jquery.min.js?1669669264"></script>
+    <script src="./js/jquery.sticky.js?1669669264"></script>
+    <script src="./js/featherlight.min.js?1669669264"></script>
+    <script src="./js/highlight.pack.js?1669669264"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="./js/modernizr.custom-3.6.0.js?1669669264"></script>
+    <script src="./js/learn.js?1669669264"></script>
+    <script src="./js/hugo-learn.js?1669669264"></script>
+    
+        
+            <script src="./mermaid/mermaid.js?1669669264"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    <script>
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/sw.js', { scope: '/' })
+            .then(function(registration) {
+                console.log('Service Worker Registered');
+            });
+
+        navigator.serviceWorker
+            .ready
+            .then(function(registration) {
+                console.log('Service Worker Ready');
+            });
+    }
+</script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2fa79da3827f4019b94a058861300bc1"}'></script>
+
+
+
+  </body>
+</html>
+
