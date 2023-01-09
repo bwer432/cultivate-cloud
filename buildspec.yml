@@ -2,14 +2,15 @@ version: 0.2
 
 env:
   variables:
-    CLOUDFRONT: E9C1KRXJZFEBW
-    PRIMARY_BUCKET: k8s-primer
+    HUGOVERSION: "0.71.0"
+    CLOUDFRONT: E1CGR9NMHXLY31
+    PRIMARY_BUCKET: www.awsdemos.net
 
 phases:
   install:
     commands:
       - echo installing hugo
-      - wget https://github.com/gohugoio/hugo/releases/download/v0.71.0/hugo_extended_0.71.0_Linux-64bit.tar.gz -O hugo_extended_0.71.0_Linux-64bit.tar.gz
+      - wget https://github.com/gohugoio/hugo/releases/download/v${HUGOVERSION}/hugo_extended_${HUGOVERSION}_Linux-64bit.tar.gz -O hugo_extended_${HUGOVERSION}_Linux-64bit.tar.gz
       - HUGO_TAR="$(find . -name "*Linux-64bit.tar.gz")"
       - tar -xzf $HUGO_TAR
       - chmod +x hugo
