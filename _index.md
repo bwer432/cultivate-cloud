@@ -1,12 +1,12 @@
 ---
-title: "Cultivate Cloud"
+title: "AWS Demos"
 chapter: true
 weight: 1
 ---
 
-# Cultivate Cloud
+# AWS Demos
 
-Welcome to *Cultivate Cloud*,
+Welcome to *AWSdemos.net*,
 a collection of resources to help 
 cultivate cloud computing development and deployment.
 
