@@ -24,7 +24,7 @@ phases:
        - echo "building"
        - echo "<p class="build-number">$(cut -c1-8 <<< ${CODEBUILD_RESOLVED_SOURCE_VERSION})</p>" >> layouts/partials/menu-footer.html
        - cat layouts/partials/menu-footer.html
-       - npm run build
+       - hugo -v
        - echo "deploying"
        - aws s3 sync public/ s3://${PRIMARY_BUCKET}/ --cache-control 'max-age=3600' --exclude '' --include '.html' --include '.xml';
        - aws s3 sync public/ s3://${PRIMARY_BUCKET}/ --cache-control 'max-age=86400' --exclude '.html' --exclude '*.xml';
