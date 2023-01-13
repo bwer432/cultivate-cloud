@@ -30,3 +30,8 @@ you may receive an error on the `delete-objects` step.
 That should be benign. 
 Continue with the `delete-bucket` operation.
 {{% /notice %}}
+
+## Unbootstrap Video
+
+{{< youtube yUst8FdAgy4 >}}
+
