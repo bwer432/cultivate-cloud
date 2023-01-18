@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
 
-    <title>Extra: Bootstrapping :: AWS Demos</title>
+    <title>Empty Stack :: AWS Demos</title>
 
     
     <link href="../../css/nucleus.css?1674059033" rel="stylesheet">
@@ -97,7 +97,7 @@
 
 
   </head>
-  <body class="" data-url="../../020_bootstrap/029_bootstrap_scratch/">
+  <body class="" data-url="../../030_basics/032_empty_stack/">
     <nav id="sidebar" class="">
 
 
@@ -172,7 +172,7 @@
   
     
     <li data-nav-id="/020_bootstrap/" title="2. Bootstrap" class="dd-item
-        parent
+        
         
         
         ">
@@ -303,7 +303,7 @@
  
   
     
-      <li data-nav-id="/020_bootstrap/029_bootstrap_scratch/" title="Extra: Bootstrapping" class="dd-item active">
+      <li data-nav-id="/020_bootstrap/029_bootstrap_scratch/" title="Extra: Bootstrapping" class="dd-item ">
         <a href="../../020_bootstrap/029_bootstrap_scratch/">
         Extra: Bootstrapping
         
@@ -332,7 +332,7 @@
   
     
     <li data-nav-id="/030_basics/" title="3. Basics" class="dd-item
-        
+        parent
         
         
         ">
@@ -379,7 +379,7 @@
  
   
     
-      <li data-nav-id="/030_basics/032_empty_stack/" title="Empty Stack" class="dd-item ">
+      <li data-nav-id="/030_basics/032_empty_stack/" title="Empty Stack" class="dd-item active">
         <a href="../../030_basics/032_empty_stack/">
         Empty Stack
         
@@ -500,7 +500,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/bwer432/awsdemos/edit/main/content/020_bootstrap/029_bootstrap_scratch.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/bwer432/awsdemos/edit/main/content/030_basics/032_empty_stack.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -531,7 +531,7 @@
             
           
           
-            <a href='../../'>AWS Demos</a> > <a href='../../020_bootstrap/'>2. Bootstrap</a> > Extra: Bootstrapping
+            <a href='../../'>AWS Demos</a> > <a href='../../030_basics/'>3. Basics</a> > Empty Stack
           
         
           
@@ -546,7 +546,9 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#longer-version-of-cdk-bootstrap">Longer version of CDK Bootstrap</a></li>
+    <li><a href="#demo-use-an-aws-cdk-environment">Demo: Use an AWS CDK Environment</a></li>
+    <li><a href="#purpose-deploy-an-empty-stack">Purpose: Deploy an empty stack</a></li>
+    <li><a href="#deploy-an-empty-cdk-app-stack">Deploy an &ldquo;empty&rdquo; CDK app stack</a></li>
   </ul>
 </nav>
     </div>
@@ -564,38 +566,61 @@
           
             <h1>
               
-              Extra: Bootstrapping
+              Empty Stack
             </h1>
           
 
         
 
 
-<h2 id="longer-version-of-cdk-bootstrap">Longer version of CDK Bootstrap</h2>
-<p>Here is a video of a longer version of the CDK Bootstrap demonstration.</p>
+<h2 id="demo-use-an-aws-cdk-environment">Demo: Use an AWS CDK Environment</h2>
+<p>Prior to deploying useful resources such as queues, buckets, and functions,
+it can be useful to practice the procedure for deploying <em>anything</em> using the CDK.</p>
+<p>The &ldquo;empty&rdquo; demo creates a CloudFormation stack with no resources other than some CDK metadata.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube-nocookie.com/embed/98I8wk6S0FQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/MszIsHI2N8M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<p>Notes:</p>
+<p>Here are the purpose points for
+the <a href="https://github.com/bwer432/awsdemo/blob/main/empty-demo/empty-deck.md">empty demo deck</a>.</p>
 <ul>
-<li>Sign in to the AWS account you wish to use.</li>
-<li>Choose the AWS region in which you want to deploy and manage resources.</li>
-<li>Check <code>node</code>, <code>npm</code>, <code>cdk</code> software installation.</li>
-<li>Compose the environment path from the account id and region code.</li>
+<li><em><strong>Why?</strong></em>
+I want to practice resource deployment in the AWS cloud.</li>
+<li><em><strong>What?</strong></em>
+Use an AWS CDK environment.</li>
+<li><em><strong>Where?</strong></em>
+In my AWS account.</li>
+<li><em><strong>How?</strong></em>
+Use AWS CDK to create an AWS CloudFormation stack, then delete it.</li>
+<li><em><strong>Then…</strong></em>
+I know how to use AWS CDK to deploy and destroy AWS resources in my account(s).</li>
 </ul>
-<p>This longer video includes references to the <code>awsdemo</code> repo artifacts:</p>
-<ul>
-<li><code>deck.md</code></li>
-<li><code>cdk-bootstrap.sh</code></li>
-</ul>
-<p>Questions:</p>
-<ul>
-<li>Did you find this longer version of the video useful?</li>
-<li>Did you prefer the shorter version at the beginning of the <em>Bootstrap</em> topic?</li>
-</ul>
+<h2 id="purpose-deploy-an-empty-stack">Purpose: Deploy an empty stack</h2>
+<p>Steps:</p>
+<p><div class='step'>
+  Create a CDK app (<code>cdk init</code>).
+</div>
 
+<div class='step'>
+  Deploy the CDK app (<code>cdk deploy</code>).
+</div>
+
+<div class='step'>
+  <em>Use the cloud app resources</em>.
+</div>
+
+<div class='step'>
+  Remove the CDK app (<code>cdk destroy</code>).
+</div>
+</p>
+<h2 id="deploy-an-empty-cdk-app-stack">Deploy an &ldquo;empty&rdquo; CDK app stack</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir empty
+</span></span><span style="display:flex;"><span>cd empty
+</span></span><span style="display:flex;"><span>cdk init app --language<span style="color:#f92672">=</span>typescript
+</span></span><span style="display:flex;"><span>cdk deploy
+</span></span><span style="display:flex;"><span>cdk destroy
+</span></span></code></pre></div>
 
 <footer class="footline">
 	
@@ -651,7 +676,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -665,8 +689,37 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
                     
                 
                 
@@ -727,10 +780,30 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -760,9 +833,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -770,51 +840,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -871,10 +896,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../020_bootstrap/028_unbootstrap_script/" title="Unbootstrap Script"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../030_basics/031_cdk_workshop/" title="AWS CDK Workshop"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../030_basics/" title="3. Basics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../030_basics/033_queue_demo/" title="Queue Demo" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

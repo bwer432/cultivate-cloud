@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
 
-    <title>Extra: Bootstrapping :: AWS Demos</title>
+    <title>Tagging Demo :: AWS Demos</title>
 
     
     <link href="../../css/nucleus.css?1674059033" rel="stylesheet">
@@ -97,7 +97,7 @@
 
 
   </head>
-  <body class="" data-url="../../020_bootstrap/029_bootstrap_scratch/">
+  <body class="" data-url="../../030_basics/034_tagging_demo/">
     <nav id="sidebar" class="">
 
 
@@ -172,7 +172,7 @@
   
     
     <li data-nav-id="/020_bootstrap/" title="2. Bootstrap" class="dd-item
-        parent
+        
         
         
         ">
@@ -303,7 +303,7 @@
  
   
     
-      <li data-nav-id="/020_bootstrap/029_bootstrap_scratch/" title="Extra: Bootstrapping" class="dd-item active">
+      <li data-nav-id="/020_bootstrap/029_bootstrap_scratch/" title="Extra: Bootstrapping" class="dd-item ">
         <a href="../../020_bootstrap/029_bootstrap_scratch/">
         Extra: Bootstrapping
         
@@ -332,7 +332,7 @@
   
     
     <li data-nav-id="/030_basics/" title="3. Basics" class="dd-item
-        
+        parent
         
         
         ">
@@ -421,7 +421,7 @@
  
   
     
-      <li data-nav-id="/030_basics/034_tagging_demo/" title="Tagging Demo" class="dd-item ">
+      <li data-nav-id="/030_basics/034_tagging_demo/" title="Tagging Demo" class="dd-item active">
         <a href="../../030_basics/034_tagging_demo/">
         Tagging Demo
         
@@ -500,7 +500,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/bwer432/awsdemos/edit/main/content/020_bootstrap/029_bootstrap_scratch.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/bwer432/awsdemos/edit/main/content/030_basics/034_tagging_demo.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -531,7 +531,7 @@
             
           
           
-            <a href='../../'>AWS Demos</a> > <a href='../../020_bootstrap/'>2. Bootstrap</a> > Extra: Bootstrapping
+            <a href='../../'>AWS Demos</a> > <a href='../../030_basics/'>3. Basics</a> > Tagging Demo
           
         
           
@@ -546,7 +546,15 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#longer-version-of-cdk-bootstrap">Longer version of CDK Bootstrap</a></li>
+    <li><a href="#demo-create-cdk-resources-with-tags">Demo: Create CDK resources with tags</a></li>
+    <li><a href="#tagging-demo-video">Tagging Demo Video</a></li>
+    <li><a href="#purpose">Purpose</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#purpose-simplify-and-enhance-cloud-resource-management">Purpose: Simplify and enhance cloud resource management</a></li>
+    <li><a href="#add-tags-to-a-cdk-app-definition">Add tags to a CDK app definition</a></li>
+    <li><a href="#aws-tagging-documentation">AWS Tagging Documentation</a></li>
   </ul>
 </nav>
     </div>
@@ -564,37 +572,91 @@
           
             <h1>
               
-              Extra: Bootstrapping
+              Tagging Demo
             </h1>
           
 
         
 
 
-<h2 id="longer-version-of-cdk-bootstrap">Longer version of CDK Bootstrap</h2>
-<p>Here is a video of a longer version of the CDK Bootstrap demonstration.</p>
+<h2 id="demo-create-cdk-resources-with-tags">Demo: Create CDK resources with tags</h2>
+<p>As noted in <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources</a>,
+<em><strong>tags</strong></em> are metadata you can add to your AWS resources to help your resource management:</p>
+<ul>
+<li>automation</li>
+<li>security: access control</li>
+<li>cost and billing</li>
+<li>searching</li>
+<li>organizing</li>
+</ul>
+<p>This demonstration builds on the queue demo by adding tags to the Amazon SQS queue resource.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube-nocookie.com/embed/98I8wk6S0FQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<div class="notices note" ><p>This demonstration includes steps to copy distinct versions of the <code>tagging-stack.ts</code>
+file to illustrate certain tagging techniques in the CDK.
+This method was chosen so that those following this demonstration <em>do not need to type code</em>,
+just copy and paste commands.
+This technique is repeated in other demonstrations as well.</p>
 </div>
 
-<p>Notes:</p>
+<h2 id="tagging-demo-video">Tagging Demo Video</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/rmbX9SqvHhc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="purpose">Purpose</h2>
+<p>Here are the purpose points for
+the <a href="https://github.com/bwer432/awsdemo/blob/main/tagging-demo/tagging-deck.md">tagging demo deck</a>.</p>
 <ul>
-<li>Sign in to the AWS account you wish to use.</li>
-<li>Choose the AWS region in which you want to deploy and manage resources.</li>
-<li>Check <code>node</code>, <code>npm</code>, <code>cdk</code> software installation.</li>
-<li>Compose the environment path from the account id and region code.</li>
+<li><em><strong>Why?</strong></em>
+I want to organize cloud resources, track cost allocation, improve automation, and enhance access control.</li>
+<li><em><strong>What?</strong></em>
+Use resource tags on AWS cloud resources.</li>
+<li><em><strong>Where?</strong></em>
+In my AWS account.</li>
+<li><em><strong>How?</strong></em>
+Use AWS CDK to tag resources.</li>
+<li><em><strong>Then…</strong></em>
+I can better manage cloud resources in my AWS accounts.</li>
 </ul>
-<p>This longer video includes references to the <code>awsdemo</code> repo artifacts:</p>
-<ul>
-<li><code>deck.md</code></li>
-<li><code>cdk-bootstrap.sh</code></li>
-</ul>
-<p>Questions:</p>
-<ul>
-<li>Did you find this longer version of the video useful?</li>
-<li>Did you prefer the shorter version at the beginning of the <em>Bootstrap</em> topic?</li>
-</ul>
+<hr>
+<h1 id="use-tags-on-cdk-resources">Use tags on CDK resources</h1>
+<h2 id="purpose-simplify-and-enhance-cloud-resource-management">Purpose: Simplify and enhance cloud resource management</h2>
+<p>Steps:</p>
+<p><div class='step'>
+  Check for presence of tags on existing CDK deployment.
+</div>
+
+<div class='step'>
+  Add tags in code. (<code>lib/tagging-stack.ts</code>).
+</div>
+
+<div class='step'>
+  Re-deploy the CDK app (<code>cdk deploy</code>).
+</div>
+
+<div class='step'>
+  Confirm tags.
+</div>
+
+<div class='step'>
+  Use the resources throughout their intended lifecycle.
+</div>
+</p>
+<h2 id="add-tags-to-a-cdk-app-definition">Add tags to a CDK app definition</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/bwer432/awsdemo
+</span></span><span style="display:flex;"><span>cd awsdemo/tagging-demo/tagging
+</span></span><span style="display:flex;"><span>npm install <span style="color:#75715e"># repopulate node_modules</span>
+</span></span><span style="display:flex;"><span>npx cdk deploy
+</span></span><span style="display:flex;"><span>vi lib/tagging-stack.ts <span style="color:#75715e"># show pre-tags baseline</span>
+</span></span><span style="display:flex;"><span>cp ../tagging-stack-direct.ts lib/tagging-stack.ts
+</span></span><span style="display:flex;"><span>npx cdk deploy <span style="color:#75715e"># then show results and/or source</span>
+</span></span><span style="display:flex;"><span>cp ../tagging-stack-via-map.ts lib/tagging-stack.ts
+</span></span><span style="display:flex;"><span>npx cdk deploy <span style="color:#75715e"># then show results and/or source</span>
+</span></span></code></pre></div><h2 id="aws-tagging-documentation">AWS Tagging Documentation</h2>
+<p>Tagging documentation:
+<a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources</a>
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-filter.html">Filtering AWS CLI output</a></p>
 
 
 <footer class="footline">
@@ -651,126 +713,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -847,6 +789,126 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -871,10 +933,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../020_bootstrap/028_unbootstrap_script/" title="Unbootstrap Script"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../030_basics/033_queue_demo/" title="Queue Demo"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../030_basics/" title="3. Basics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../030_basics/037_static_site_demo/" title="Static Site Demo" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

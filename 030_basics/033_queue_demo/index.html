@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
 
-    <title>Extra: Bootstrapping :: AWS Demos</title>
+    <title>Queue Demo :: AWS Demos</title>
 
     
     <link href="../../css/nucleus.css?1674059033" rel="stylesheet">
@@ -97,7 +97,7 @@
 
 
   </head>
-  <body class="" data-url="../../020_bootstrap/029_bootstrap_scratch/">
+  <body class="" data-url="../../030_basics/033_queue_demo/">
     <nav id="sidebar" class="">
 
 
@@ -172,7 +172,7 @@
   
     
     <li data-nav-id="/020_bootstrap/" title="2. Bootstrap" class="dd-item
-        parent
+        
         
         
         ">
@@ -303,7 +303,7 @@
  
   
     
-      <li data-nav-id="/020_bootstrap/029_bootstrap_scratch/" title="Extra: Bootstrapping" class="dd-item active">
+      <li data-nav-id="/020_bootstrap/029_bootstrap_scratch/" title="Extra: Bootstrapping" class="dd-item ">
         <a href="../../020_bootstrap/029_bootstrap_scratch/">
         Extra: Bootstrapping
         
@@ -332,7 +332,7 @@
   
     
     <li data-nav-id="/030_basics/" title="3. Basics" class="dd-item
-        
+        parent
         
         
         ">
@@ -400,7 +400,7 @@
  
   
     
-      <li data-nav-id="/030_basics/033_queue_demo/" title="Queue Demo" class="dd-item ">
+      <li data-nav-id="/030_basics/033_queue_demo/" title="Queue Demo" class="dd-item active">
         <a href="../../030_basics/033_queue_demo/">
         Queue Demo
         
@@ -500,7 +500,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/bwer432/awsdemos/edit/main/content/020_bootstrap/029_bootstrap_scratch.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/bwer432/awsdemos/edit/main/content/030_basics/033_queue_demo.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -531,7 +531,7 @@
             
           
           
-            <a href='../../'>AWS Demos</a> > <a href='../../020_bootstrap/'>2. Bootstrap</a> > Extra: Bootstrapping
+            <a href='../../'>AWS Demos</a> > <a href='../../030_basics/'>3. Basics</a> > Queue Demo
           
         
           
@@ -546,7 +546,14 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#longer-version-of-cdk-bootstrap">Longer version of CDK Bootstrap</a></li>
+    <li><a href="#demo-create-an-amazon-sqs-queue">Demo: Create an Amazon SQS Queue</a></li>
+    <li><a href="#from-scratch">From Scratch</a></li>
+    <li><a href="#from-the-awsdemo-repo">From the <code>awsdemo</code> repo</a></li>
+    <li><a href="#purpose">Purpose</a></li>
+    <li><a href="#purpose-create-a-cdk-stack-with-a-queue">Purpose: Create a CDK stack with a queue</a></li>
+    <li><a href="#deploy-a-queue-via-cdk-app-stack">Deploy a queue via CDK app stack</a></li>
+    <li><a href="#amazon-sqs-documentation">Amazon SQS Documentation</a></li>
+    <li><a href="#deploy-a-queue-via-cdk-app-stack-with-python-clients">Deploy a queue via CDK app stack with Python clients</a></li>
   </ul>
 </nav>
     </div>
@@ -564,38 +571,102 @@
           
             <h1>
               
-              Extra: Bootstrapping
+              Queue Demo
             </h1>
           
 
         
 
 
-<h2 id="longer-version-of-cdk-bootstrap">Longer version of CDK Bootstrap</h2>
-<p>Here is a video of a longer version of the CDK Bootstrap demonstration.</p>
+<h2 id="demo-create-an-amazon-sqs-queue">Demo: Create an Amazon SQS Queue</h2>
+<p>As noted in <a href="https://aws.amazon.com/blogs/aws/aws-blog-the-first-five-years/">The AWS Blog by Jeff Barr in 2009</a>,
+the <a href="https://aws.amazon.com/blogs/aws/amazon_simple_q/">Amazon Simple Queue Service (SQS) was the first AWS service released</a>.</p>
+<p>This queue demo could be demonstrated in (at least) two ways:</p>
+<ul>
+<li>from scratch</li>
+<li>from the <code>awsdemo</code> repo</li>
+</ul>
+<p>The former includes examples of AWS CLI commands for sending and receiving messages.
+The latter includes examples of using Python code and the <code>boto3</code> AWS SDK for Python to send and receive messages.</p>
+<h2 id="from-scratch">From Scratch</h2>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube-nocookie.com/embed/98I8wk6S0FQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/blnjyseXQVo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<p>Notes:</p>
-<ul>
-<li>Sign in to the AWS account you wish to use.</li>
-<li>Choose the AWS region in which you want to deploy and manage resources.</li>
-<li>Check <code>node</code>, <code>npm</code>, <code>cdk</code> software installation.</li>
-<li>Compose the environment path from the account id and region code.</li>
-</ul>
-<p>This longer video includes references to the <code>awsdemo</code> repo artifacts:</p>
-<ul>
-<li><code>deck.md</code></li>
-<li><code>cdk-bootstrap.sh</code></li>
-</ul>
-<p>Questions:</p>
-<ul>
-<li>Did you find this longer version of the video useful?</li>
-<li>Did you prefer the shorter version at the beginning of the <em>Bootstrap</em> topic?</li>
-</ul>
+<h2 id="from-the-awsdemo-repo">From the <code>awsdemo</code> repo</h2>
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/v6p1yVHuZ0M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="purpose">Purpose</h2>
+<p>Here are the purpose points for
+the <a href="https://github.com/bwer432/awsdemo/blob/main/queue-demo/queue-deck.md">queue demo deck</a>.</p>
+<ul>
+<li><em><strong>Why?</strong></em>
+I want to use a message queue in the AWS cloud.</li>
+<li><em><strong>What?</strong></em>
+Use an AWS CDK environment.</li>
+<li><em><strong>Where?</strong></em>
+In my AWS account.</li>
+<li><em><strong>How?</strong></em>
+Use AWS CDK to create an Amazon SQS Queue.</li>
+<li><em><strong>Then…</strong></em>
+I can send and receive messages via a message queue in my AWS account.</li>
+</ul>
+<h2 id="purpose-create-a-cdk-stack-with-a-queue">Purpose: Create a CDK stack with a queue</h2>
+<p>Steps:</p>
+<p><div class='step'>
+  Create a CDK app (<code>cdk init</code>).
+</div>
+
+<div class='step'>
+  Uncomment the Amazon SQS bits (<code>vi lib/queue-stack.ts</code>).
+</div>
+
+<div class='step'>
+  Deploy the CDK app (<code>cdk deploy</code>).
+</div>
+
+<div class='step'>
+  Send and receive queue messages.
+</div>
+
+<div class='step'>
+  Remove the CDK app (<code>cdk destroy</code>).
+</div>
+</p>
+<hr>
+<h2 id="deploy-a-queue-via-cdk-app-stack">Deploy a queue via CDK app stack</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir queue
+</span></span><span style="display:flex;"><span>cd queue
+</span></span><span style="display:flex;"><span>cdk init app --language<span style="color:#f92672">=</span>typescript
+</span></span><span style="display:flex;"><span>cdk deploy
+</span></span><span style="display:flex;"><span>aws sqs list-queues 
+</span></span><span style="display:flex;"><span>q<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>aws sqs list-queues --query <span style="color:#e6db74">&#34;QueueUrls[0]&#34;</span> --output text<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>aws sqs receive-message --queue-url $q --wait-time-seconds <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>aws sqs send-message --queue-url $q --message-body <span style="color:#e6db74">&#34;hello, world&#34;</span> 
+</span></span><span style="display:flex;"><span>cdk destroy --force
+</span></span></code></pre></div><h2 id="amazon-sqs-documentation">Amazon SQS Documentation</h2>
+<p>Queue code examples:</p>
+<ul>
+<li><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/guide/sqs-example-sending-receiving-msgs.html">Amazon SQS boto3 API</a></li>
+<li><a href="https://docs.aws.amazon.com/code-library/latest/ug/python_3_sqs_code_examples.html">Amazon SQS Python3 SQS code examples</a></li>
+</ul>
+<h2 id="deploy-a-queue-via-cdk-app-stack-with-python-clients">Deploy a queue via CDK app stack with Python clients</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/bwer432/awsdemo
+</span></span><span style="display:flex;"><span>cd awsdemo/queue-demo/queue
+</span></span><span style="display:flex;"><span>npm install <span style="color:#75715e"># repopulate node_modules</span>
+</span></span><span style="display:flex;"><span>npx cdk deploy
+</span></span><span style="display:flex;"><span>aws sqs list-queues 
+</span></span><span style="display:flex;"><span>q<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>aws sqs list-queues --query QueueUrls --output text | grep QueueStack-QueueQueue<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>aws sqs receive-message --queue-url $q --wait-time-seconds <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>aws sqs send-message --queue-url $q --message-body <span style="color:#e6db74">&#34;hello, world&#34;</span> 
+</span></span><span style="display:flex;"><span>python3 ../sqs-send.py $q
+</span></span><span style="display:flex;"><span>python3 ../sqs-recv.py $q
+</span></span><span style="display:flex;"><span>npx cdk destroy --force
+</span></span></code></pre></div>
 
 <footer class="footline">
 	
@@ -651,126 +722,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -831,6 +782,126 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -871,10 +942,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../020_bootstrap/028_unbootstrap_script/" title="Unbootstrap Script"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../030_basics/032_empty_stack/" title="Empty Stack"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../030_basics/" title="3. Basics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../030_basics/034_tagging_demo/" title="Tagging Demo" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
