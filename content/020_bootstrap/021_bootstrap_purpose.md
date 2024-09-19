@@ -13,7 +13,7 @@ We start each demonstration with a slide deck presenting the purpose of the demo
 The *bootstrap* demo is no different!
 
 Here are the purpose points for 
-the [bootstrap deck](https://github.com/bwer432/awsdemo/blob/main/bootstrap/deck.md).
+the [bootstrap deck](https://github.com/bwer432/cultivatecloud/blob/main/bootstrap/deck.md).
 
 - ***Why?*** 
   I want to automate resource deployment in the AWS cloud.

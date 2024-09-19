@@ -15,7 +15,7 @@ The "empty" demo creates a CloudFormation stack with no resources other than som
 {{< youtube MszIsHI2N8M >}}
 
 Here are the purpose points for 
-the [empty demo deck](https://github.com/bwer432/awsdemo/blob/main/empty-demo/empty-deck.md).
+the [empty demo deck](https://github.com/bwer432/cultivatecloud/blob/main/empty-demo/empty-deck.md).
 
 - ***Why?*** 
   I want to practice resource deployment in the AWS cloud.

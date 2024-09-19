@@ -9,10 +9,10 @@ draft: false
 
 The quickest way to get started using 
 these demonstrations is to 
-clone the [`awsdemo`](https://github.com/bwer432/awsdemo) repo.
+clone the [`cultivatecloud`](https://github.com/bwer432/cultivatecloud) repo.
 
 ```
-git clone https://github.com/bwer432/awsdemo
+git clone https://github.com/bwer432/cultivatecloud
 ```
 
 ## Prerequisite to demos: `cdk bootstrap`:
@@ -27,10 +27,10 @@ you have not already done a `cdk bootstrap`
 then do that before attempting any of the demos.
 
 {{% notice note %}}
-The git repo [`awsdemos`](https://github.com/bwer432/awsdemos) (*plural*) is the source code for the awsdemos.net website.
-The git repo [`awsdemo`](https://github.com/bwer432/awsdemo) (*singular*) is the repo of demo scripts and CDK app templates.
+The git repo [`cultivatecloudsite`](https://github.com/bwer432/cultivatecloudsite) is the source code for the cultivatecloud.net website.
+The git repo [`cultivatecloud`](https://github.com/bwer432/cultivatecloud) is the repo of demo scripts and CDK app templates.
 These were kept separate (at the risk of confusion from similar names)
-so you can clone just [`awsdemo`](https://github.com/bwer432/awsdemo) if all you want is the repo of scripts/CDK examples.
+so you can clone just [`cultivatecloud`](https://github.com/bwer432/cultivatecloud) if all you want is the repo of scripts/CDK examples.
 {{% /notice %}}
 
 

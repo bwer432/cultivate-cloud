@@ -32,7 +32,7 @@ This technique is repeated in other demonstrations as well.
 ## Purpose
 
 Here are the purpose points for 
-the [tagging demo deck](https://github.com/bwer432/awsdemo/blob/main/tagging-demo/tagging-deck.md).
+the [tagging demo deck](https://github.com/bwer432/cultivatecloud/blob/main/tagging-demo/tagging-deck.md).
 
 - ***Why?*** 
   I want to organize cloud resources, track cost allocation, improve automation, and enhance access control.
@@ -62,8 +62,8 @@ Steps:
 ## Add tags to a CDK app definition
 
 ```bash
-git clone https://github.com/bwer432/awsdemo
-cd awsdemo/tagging-demo/tagging
+git clone https://github.com/bwer432/cultivatecloud
+cd cultivatecloud/tagging-demo/tagging
 npm install # repopulate node_modules
 npx cdk deploy
 vi lib/tagging-stack.ts # show pre-tags baseline

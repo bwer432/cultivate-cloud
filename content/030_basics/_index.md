@@ -7,7 +7,7 @@ draft: false
 
 ## Basics
 
-Many of the demonstrations scripted in the  [`awsdemo` repo](https://github.com/bwer432/awsdemo) follow this theme:
+Many of the demonstrations scripted in the  [`cultivatecloud` repo](https://github.com/bwer432/cultivatecloud) follow this theme:
 
 1. ***Deploy*** a stack of AWS resources.
 2. Use those resources in some way(s).

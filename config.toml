@@ -1,7 +1,7 @@
 languageCode = "en-us"
 ignoreFiles = [ "\\.files/README.md$",  "content/intermediate/260_weave_flux/app.files/"]
 defaultContentLanguage = "en"
-title = "AWS Demos"
+title = "Cultivate Cloud"
 theme = "learn"
 uglyurls = false
 # googleAnalytics = "UA-44634850-4"
@@ -12,7 +12,7 @@ relativeURLs = true
 hrefTargetBlank = true
 
 [params]
-editURL = "https://github.com/bwer432/awsdemos/edit/main/content/"
+editURL = "https://github.com/bwer432/cultivatecloudsite/edit/main/content/"
 themeVariant = "mine"
 showVisitedLinks = false
 hideSidebar = false  # initially a site parameter, not at page level
@@ -23,9 +23,9 @@ disableAssetsBusting = false
 disableLanguageSwitchingButton = true
 disableShortcutsTitle=false
 disableInlineCopyToClipBoard = true
-ghrepo = "https://github.com/bwer432/awsdemos/"
+ghrepo = "https://github.com/bwer432/cultivatecloudsite/"
 branch = "main"
-template_bucket = "www.awsdemos.net"
+template_bucket = "cultivatecloud.net"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
@@ -60,7 +60,7 @@ pygmentsStyle = "tango"
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-github'></i> GitHub Project"
-url = "https://github.com/bwer432/awsdemos"
+url = "https://github.com/bwer432/cultivatecloudsite"
 weight = 30
 
 # [[menu.shortcuts]]

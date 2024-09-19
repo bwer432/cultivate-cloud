@@ -8,7 +8,7 @@ draft: false
 ## Bootstrap
 
 The demonstrations described in this site and 
-demo artifacts included in the `awsdemo` (*singular*) repository
+demo artifacts included in the `cultivatecloud` repository
 set up resources using the AWS Cloud Development Kit (CDK).
 
 Prior to using `cdk` in the demonstrations, you need to "bootstrap"

@@ -4,7 +4,7 @@ env:
   variables:
     HUGOVERSION: "0.71.0"
     CLOUDFRONT: E1CGR9NMHXLY31
-    PRIMARY_BUCKET: www.awsdemos.net
+    PRIMARY_BUCKET: cultivatecloud.net
 
 phases:
   install:

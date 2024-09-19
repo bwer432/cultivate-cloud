@@ -12,7 +12,7 @@ the [Amazon Simple Queue Service (SQS) was the first AWS service released](https
 
 This queue demo could be demonstrated in (at least) two ways:
 - from scratch
-- from the `awsdemo` repo
+- from the `cultivatecloud` repo
 
 The former includes examples of AWS CLI commands for sending and receiving messages.
 The latter includes examples of using Python code and the `boto3` AWS SDK for Python to send and receive messages.
@@ -21,14 +21,14 @@ The latter includes examples of using Python code and the `boto3` AWS SDK for Py
 
 {{< youtube blnjyseXQVo >}}
 
-## From the `awsdemo` repo
+## From the `cultivatecloud` repo
 
 {{< youtube v6p1yVHuZ0M >}}
 
 ## Purpose
 
 Here are the purpose points for 
-the [queue demo deck](https://github.com/bwer432/awsdemo/blob/main/queue-demo/queue-deck.md).
+the [queue demo deck](https://github.com/bwer432/cultivatecloud/blob/main/queue-demo/queue-deck.md).
 
 - ***Why?*** 
   I want to use a message queue in the AWS cloud.
@@ -76,8 +76,8 @@ Queue code examples:
 ## Deploy a queue via CDK app stack with Python clients
 
 ```bash
-git clone https://github.com/bwer432/awsdemo
-cd awsdemo/queue-demo/queue
+git clone https://github.com/bwer432/cultivatecloud
+cd cultivatecloud/queue-demo/queue
 npm install # repopulate node_modules
 npx cdk deploy
 aws sqs list-queues 

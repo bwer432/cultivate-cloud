@@ -1,6 +1,6 @@
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/bwer432/awsdemos) 
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/bwer432/cultivatecloudsite) 
 
-# awsdemos
+# cultivatecloudsite
 
 ### Setup:
 #### Using GitPod.io:
@@ -9,7 +9,7 @@ This is how I set up my environment:
 (I am using gitpod.io for editing)
 
 1. fork the repo to your own github account
-2. prepend `gitpod.io#` to the beginning of your github url. Mine becomes: `https://gitpod.io#github.com/bwer432/awsdemos`
+2. prepend `gitpod.io#` to the beginning of your github url. Mine becomes: `https://gitpod.io#github.com/bwer432/cultivatecloudsite`
 3. once gitpod has started, in the terminal, run `npm install && npm run theme`
 This will install the dependencies and clone the theme submodule.
 
@@ -35,10 +35,10 @@ Install Hugo:
 
 #### Clone this repo:
 From wherever you checkout repos:
-`git clone git@github.com:bwer432/awsdemos.git` (or your fork)
+`git clone git@github.com:bwer432/cultivatecloudsite.git` (or your fork)
 
 #### Clone the theme submodule:
-`cd awsdemos`
+`cd cultivatecloudsite`
 
 `git submodule init` ;
 `git submodule update`
@@ -70,6 +70,6 @@ deployed hash at the bottom of the menu panel.
 
 Any commits to a branch will auto build and deploy in a couple of minutes to a custom route named with the branch name. You can see the currently
 deployed hash at the bottom of the menu panel.
-An example is the "jenkinsworld" branch would be deployed to https://awsdemos.net/jenkinsworld/
+An example is the "jenkinsworld" branch would be deployed to https://cultivatecloudsite.net/jenkinsworld/
 
 note: shift-reload may be necessary in your browser to reflect the latest changes.

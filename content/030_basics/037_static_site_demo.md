@@ -33,7 +33,7 @@ Demonstration explaining some of the AWS CDK components for deploying a static w
 ## Purpose
 
 Here are the purpose points for 
-the [static site demo deck](https://github.com/bwer432/awsdemo/blob/main/static-site-demo/static-site-deck.md).
+the [static site demo deck](https://github.com/bwer432/cultivatecloud/blob/main/static-site-demo/static-site-deck.md).
 
 - ***Why?*** 
   I want to create a serverless static website.
@@ -60,8 +60,8 @@ Steps:
 ## Borrow an example
 
 ```bash
-git clone https://github.com/bwer432/awsdemo
-cd awsdemo/static-site-demo
+git clone https://github.com/bwer432/cultivatecloud
+cd cultivatecloud/static-site-demo
 git clone https://github.com/aws-samples/aws-cdk-examples
 cp -R aws-cdk-examples/typescript/static-site ./static-site
 rm -rf aws-cdk-examples
@@ -72,8 +72,8 @@ ls
 ## Deploy a static website
 
 ```bash
-git clone https://github.com/bwer432/awsdemo
-cd awsdemo/static-site-demo/static-site
+git clone https://github.com/bwer432/cultivatecloud
+cd cultivatecloud/static-site-demo/static-site
 npm install 
 npm run build
 accountId=$(aws sts get-caller-identity --query Account --output text)

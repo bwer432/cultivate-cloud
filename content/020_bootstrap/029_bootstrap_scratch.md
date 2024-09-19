@@ -17,7 +17,7 @@ Notes:
 - Check `node`, `npm`, `cdk` software installation.
 - Compose the environment path from the account id and region code.
 
-This longer video includes references to the `awsdemo` repo artifacts:
+This longer video includes references to the `cultivatecloud` repo artifacts:
 - `deck.md`
 - `cdk-bootstrap.sh`
 
