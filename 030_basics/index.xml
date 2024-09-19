@@ -1,11 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3. Basics on AWS Demos</title><link>/030_basics/</link><description>Recent content in 3. Basics on AWS Demos</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="/030_basics/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS CDK Workshop</title><link>/030_basics/031_cdk_workshop/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/030_basics/031_cdk_workshop/</guid><description>Optional Background The intended audience for these demonstrations includes people who are not software developers. However, those conducting demonstrations based on these demo scripts and videos, and those viewing or following them, might be curious about further details on the CDK.
-For such curious people, the AWS CDK Workshop might be of interest.
-Developers have their choice of programming language used to leverage the power of the CDK. At the time of this writing, the CDK workshop was available in TypeScript, Python, .</description></item><item><title>Empty Stack</title><link>/030_basics/032_empty_stack/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/030_basics/032_empty_stack/</guid><description>Demo: Use an AWS CDK Environment Prior to deploying useful resources such as queues, buckets, and functions, it can be useful to practice the procedure for deploying anything using the CDK.
-The &amp;ldquo;empty&amp;rdquo; demo creates a CloudFormation stack with no resources other than some CDK metadata.
-Here are the purpose points for the empty demo deck.
-Why? I want to practice resource deployment in the AWS cloud. What? Use an AWS CDK environment.</description></item><item><title>Queue Demo</title><link>/030_basics/033_queue_demo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/030_basics/033_queue_demo/</guid><description>Demo: Create an Amazon SQS Queue As noted in The AWS Blog by Jeff Barr in 2009, the Amazon Simple Queue Service (SQS) was the first AWS service released.
-This queue demo could be demonstrated in (at least) two ways:
-from scratch from the awsdemo repo The former includes examples of AWS CLI commands for sending and receiving messages. The latter includes examples of using Python code and the boto3 AWS SDK for Python to send and receive messages.</description></item><item><title>Tagging Demo</title><link>/030_basics/034_tagging_demo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/030_basics/034_tagging_demo/</guid><description>Demo: Create CDK resources with tags As noted in Tagging AWS resources, tags are metadata you can add to your AWS resources to help your resource management:
-automation security: access control cost and billing searching organizing This demonstration builds on the queue demo by adding tags to the Amazon SQS queue resource.
-This demonstration includes steps to copy distinct versions of the tagging-stack.ts file to illustrate certain tagging techniques in the CDK.</description></item><item><title>Static Site Demo</title><link>/030_basics/037_static_site_demo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/030_basics/037_static_site_demo/</guid><description>Demo: Create an Serverless Static Website There are several points to this series of demonstrations:
-How to borrow code from other tutorials and demos (and repurpose them). Deploying a serverless static website. Briefly explaining the deployment of multiple cloud resources in one stack. Borrowing Demonstration of borrowing an AWS CDK app stack template so we don&amp;rsquo;t have to start from scratch. The example will be used in a separate video to create a static website.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3. Basics on Cultivate Cloud</title><link>/030_basics/</link><description>Recent content in 3. Basics on Cultivate Cloud</description><generator>Hugo</generator><language>en-us</language><atom:link href="/030_basics/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS CDK Workshop</title><link>/030_basics/031_cdk_workshop/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/030_basics/031_cdk_workshop/</guid><description>&lt;h2 id="optional-background">Optional Background&lt;/h2>
+&lt;p>The intended audience for these demonstrations includes people who are &lt;em>not&lt;/em> software developers.
+However, those conducting demonstrations based on these demo scripts and videos,
+and those viewing or following them, might be curious about further details on the CDK.&lt;/p>
+&lt;p>For such curious people, the &lt;a href="https://cdkworkshop.com">AWS CDK Workshop&lt;/a> might be of interest.&lt;/p>
+&lt;p>Developers have their choice of programming language used to leverage the power of the CDK.
+At the time of this writing, the CDK workshop was available in TypeScript, Python, .NET, Java, and Go.&lt;/p></description></item><item><title>Empty Stack</title><link>/030_basics/032_empty_stack/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/030_basics/032_empty_stack/</guid><description>&lt;h2 id="demo-use-an-aws-cdk-environment">Demo: Use an AWS CDK Environment&lt;/h2>
+&lt;p>Prior to deploying useful resources such as queues, buckets, and functions,
+it can be useful to practice the procedure for deploying &lt;em>anything&lt;/em> using the CDK.&lt;/p>
+&lt;p>The &amp;ldquo;empty&amp;rdquo; demo creates a CloudFormation stack with no resources other than some CDK metadata.&lt;/p>
+
+
+ 
+ &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/MszIsHI2N8M?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+ >&lt;/iframe>
+ &lt;/div>
+
+&lt;p>Here are the purpose points for
+the &lt;a href="https://github.com/bwer432/cultivatecloud/blob/main/empty-demo/empty-deck.md">empty demo deck&lt;/a>.&lt;/p></description></item><item><title>Queue Demo</title><link>/030_basics/033_queue_demo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/030_basics/033_queue_demo/</guid><description>&lt;h2 id="demo-create-an-amazon-sqs-queue">Demo: Create an Amazon SQS Queue&lt;/h2>
+&lt;p>As noted in &lt;a href="https://aws.amazon.com/blogs/aws/aws-blog-the-first-five-years/">The AWS Blog by Jeff Barr in 2009&lt;/a>,
+the &lt;a href="https://aws.amazon.com/blogs/aws/amazon_simple_q/">Amazon Simple Queue Service (SQS) was the first AWS service released&lt;/a>.&lt;/p>
+&lt;p>This queue demo could be demonstrated in (at least) two ways:&lt;/p>
+&lt;ul>
+&lt;li>from scratch&lt;/li>
+&lt;li>from the &lt;code>cultivatecloud&lt;/code> repo&lt;/li>
+&lt;/ul>
+&lt;p>The former includes examples of AWS CLI commands for sending and receiving messages.
+The latter includes examples of using Python code and the &lt;code>boto3&lt;/code> AWS SDK for Python to send and receive messages.&lt;/p></description></item><item><title>Tagging Demo</title><link>/030_basics/034_tagging_demo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/030_basics/034_tagging_demo/</guid><description>&lt;h2 id="demo-create-cdk-resources-with-tags">Demo: Create CDK resources with tags&lt;/h2>
+&lt;p>As noted in &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources&lt;/a>,
+&lt;em>&lt;strong>tags&lt;/strong>&lt;/em> are metadata you can add to your AWS resources to help your resource management:&lt;/p>
+&lt;ul>
+&lt;li>automation&lt;/li>
+&lt;li>security: access control&lt;/li>
+&lt;li>cost and billing&lt;/li>
+&lt;li>searching&lt;/li>
+&lt;li>organizing&lt;/li>
+&lt;/ul>
+&lt;p>This demonstration builds on the queue demo by adding tags to the Amazon SQS queue resource.&lt;/p>
+
+&lt;div class="notices note" >&lt;p>This demonstration includes steps to copy distinct versions of the &lt;code>tagging-stack.ts&lt;/code>
+file to illustrate certain tagging techniques in the CDK.
+This method was chosen so that those following this demonstration &lt;em>do not need to type code&lt;/em>,
+just copy and paste commands.
+This technique is repeated in other demonstrations as well.&lt;/p></description></item><item><title>Static Site Demo</title><link>/030_basics/037_static_site_demo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/030_basics/037_static_site_demo/</guid><description>&lt;h2 id="demo-create-an-serverless-static-website">Demo: Create an Serverless Static Website&lt;/h2>
+&lt;p>There are several points to this series of demonstrations:&lt;/p>
+&lt;ul>
+&lt;li>How to borrow code from other tutorials and demos (and repurpose them).&lt;/li>
+&lt;li>Deploying a serverless static website.&lt;/li>
+&lt;li>Briefly explaining the deployment of multiple cloud resources in one stack.&lt;/li>
+&lt;/ul>
+&lt;h2 id="borrowing">Borrowing&lt;/h2>
+&lt;p>Demonstration of borrowing an AWS CDK app stack template so we don&amp;rsquo;t have to start from scratch. The example will be used in a separate video to create a static website.&lt;/p></description></item></channel></rss>
